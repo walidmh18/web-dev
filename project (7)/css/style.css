@@ -1,0 +1,529 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
+html{
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Cabin', sans-serif;
+}
+body{
+    position: relative;
+}
+.celebrate{
+    width: 100%;
+    background: #000;
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+}
+.celebrate span{
+    text-decoration: underline;
+}
+
+a{
+    color: #000;
+    text-decoration: none;
+}
+ul li{
+    list-style: none;
+}
+/* nav styling */
+    nav{
+        height: 15vh;
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 100px;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        background: #efefef;
+        z-index: 1000;
+    }
+    .hamburgerMenu{
+        display: none;
+    }
+    nav div a{
+        padding: 10px 20px;
+        margin: 0 5px;
+        text-transform: capitalize;
+    }
+    .navMenuContainer{
+        display: flex;
+        justify-content: space-between;
+        width: 65%;
+    }
+    .navEls{
+        display: flex;
+    }
+    .navEl a{position: relative;}
+    .navEl a::after{
+        transition: 0.3s;
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 3px;
+        background: #000;
+        bottom: 3px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .navEl a:hover::after{
+        width: 80%;
+    
+    }
+    .navEl a.active::after{
+        width: 80%;
+    }
+    .navLogo{
+        font-weight: 700;
+        text-transform: none;
+        padding-left: 0;
+        margin-left: 0;
+    }
+    .loginBtn{
+        border: 2px solid transparent;
+    }
+    .loginBtn:hover{
+        color: #fff;
+        background: #000;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+        border: solid 2px #000;
+        transition: 0.3s;
+    }
+    #navClose{
+        display: none;
+    }
+    .getStartedBtn{
+        color: #fff;
+        background: #000;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+        border: solid 2px #000;
+        transition: 0.3s;
+        margin-left: 0.5rem;
+        margin-right: 0;
+    }
+    .getStartedBtn:hover{
+        color: #000;
+        background: none;
+    }
+    /* business section styling */
+    
+    #business{
+        background: #efefef;
+        padding: 0 100px 50px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .businessText{
+        width: 60%;
+        box-sizing: border-box;
+        padding-right: 10rem;
+        margin-top: 50px;
+    }
+    .businessText h1{
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        color: #202020;
+    }
+    .businessText > p{
+        color: #333;
+        margin-bottom: 1.5rem;
+    }
+    .sec1Features{
+        display: flex;
+        margin-top: 0.5rem;
+        color: #333;
+        font-weight: 600;
+    }
+    .getStartedForm{
+        margin-top: 2rem;
+    }
+    .getStartedForm input[type="email"]{
+        background: #fff;
+        outline: none;
+        border: 1px solid #999;
+        color: #000;
+        padding: 11px 20px;
+        border-radius: 5px;
+    }
+    .sec1Features svg{
+        padding: 0 5px 0 0;
+    }
+    .businessImg img{
+        width: 400px;
+    }
+    .herotablet{
+        display: none;
+    }
+    .heromobile{
+        display: none;
+    
+    }
+    
+    /* logos styling*/
+    .logos{
+        display: flex;
+        width: 100%;
+        padding: 10px 100px;
+        box-sizing: border-box;
+        margin-top: 20px;
+    }
+    .desktopLogos img{
+        height: 27px;    
+        margin: 0px 15px;
+    
+    }
+    
+    
+    
+    /* sec 2 styling */
+    #sec2{
+        margin: 20px 100px;
+        height: 405px;
+        background: #efefef;
+        box-sizing: border-box;
+        border-radius: 10px;
+        position: relative;
+    }
+    .sec2Text{
+        padding: 100px 70px;
+        width: 40%;
+    }
+    .secH1{
+        font-size: 2.3rem;
+        margin-bottom: 2rem;
+    }
+    .secP{
+        color: #303030;
+        margin-bottom: 1rem;
+    }
+    .secAnchor{
+        color: #303030;
+        text-decoration: underline;
+        font-weight: 500;
+    }
+    
+    .sec2Img img{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+    .phonetablet{
+        display: none;
+    }
+    .phonemobile{
+        display: none;
+    }
+    
+    
+    /* sec3 styling */
+    
+    
+    
+    #sec3{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+        margin: 20px 100px;
+    }
+    .sec3Txt{
+        width: 45%;
+        padding-bottom: 3rem;
+        box-sizing: border-box;
+    }
+    .sec3Img{
+        width: 55%;
+    }
+    .sec3Img img{
+        width: 100%;
+        /* padding-top: 5rem; */
+    }
+
+
+/* footer styling */
+footer{
+    background: #000;
+    color: #fff;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    padding: 50px 100px;
+    gap: 20px;
+    display: grid;
+}
+.footerCol1{
+    grid-column: span 2;
+}
+.footerCol h2{
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+.footerCol p, .footerCol ul li a{
+    color: #999;
+}
+.footerCol ul li{
+    margin-bottom: 0.5rem;
+}
+
+
+/* media queries */
+@media screen and (max-width: 1350px){
+    .desktopLogos img{
+        height: 25px;
+    }
+}
+@media screen and (max-width: 1280px){
+    .desktopLogos img{
+        height: 20px;
+    }
+}
+@media screen and (max-width: 1120px){
+    .logos{
+        width: unset;
+    }
+    
+    .mobileLogos{
+        display: none;
+     }
+    .navMenuContainer{
+        width: unset;
+     }
+     .businessImg img{
+        width: 300px;
+    }
+    .businessText{
+        padding-right: 50px;
+    }
+}
+
+@media screen and (max-width: 800px){
+     
+     nav{
+        padding: 0 30px;
+     }
+    
+     .herodesk{
+        display: none;
+     }
+     .getStartedBtn{
+        padding: 7px 14px;
+     }
+     nav div a{
+        padding: 7px 14px;
+     }
+     .loginBtn:hover{
+        padding: 7px 14px;
+     }
+     .herotablet{
+        display: block;
+        width: 100% !important;
+     }
+     #business{
+        flex-direction: column-reverse;
+        padding: 0 30px 50px;
+        height: unset;
+     }
+     .businessText{
+        width: 100%;
+        padding-right: 3rem;
+     }
+     .logos{
+        padding: 10px 30px;
+     }
+     .phonedesk{
+        display: none;
+     }
+     .phonetablet{
+        display: block;
+        position: unset !important;
+        width: 100%;
+        margin-top: -20px;
+     }
+     #sec2{
+        display: flex;
+        flex-direction: column;
+        height: unset;
+        margin: 20px 30px;
+     }
+     .sec2Text{
+        width: 100%;
+        box-sizing: border-box;
+        padding: 70px 50px;
+        padding-bottom: 0;
+     }
+     .mobileLogos{
+        display: none;
+     }
+     .secH1{
+        margin-bottom: 1rem;
+     }
+     #sec3{
+        flex-direction: column;
+        margin: 20px 0px;
+     }
+     .sec3Txt{
+        width: unset;
+        margin: 30px;
+        box-sizing: border-box;
+
+     }
+     .sec3Img{
+        width: 100%;
+        overflow: hidden;
+     }
+     .sec3Img img{
+        width: calc(100% + 30px);
+        
+     }
+     footer{
+        grid-template-columns: repeat(4, 1fr);
+        padding: 50px 30px;
+    }
+    
+}
+@media screen and (max-width: 600px){
+    nav div a, .getStartedBtn{
+        margin: 0;
+        padding: 5px 10px;
+    }
+    .desktopLogos img{
+        margin: 0 5px;
+    }
+}
+@media screen and (max-width: 510px){
+    nav{
+        padding: 0 20px;
+        font-size: 13px;
+    }
+    .businessText{
+        padding: 0;
+    }
+    .desktopLogos img{
+        margin: 0 2px;
+    }
+    footer{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media screen and (max-width: 425px){
+    footer{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .celebrate{
+        padding: 10px 40px;
+        box-sizing: border-box;
+    }
+    .navMenuContainer{
+        position: fixed;
+        background: black;
+        width: 90vw;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 80vh;
+        bottom: -80vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 15px 15px 0 0;
+    }
+    .navMenuContainerContaier{
+        background: none;
+    }
+    #navClose{
+        display: block;
+        position: relative;
+        margin-top: 5rem;
+        width: 40px;
+    }
+    #navClose::after{
+        background: white;
+        content: '';
+        position: absolute;
+        width: 50px;
+        height: 3px;
+        top: 0;left: 0; 
+        transform: rotate(45deg) ;
+        
+
+    }
+    #navClose::before{
+        background: white;
+        content: '';
+        position: absolute;
+        width: 50px;
+        height: 3px;
+        top: 0;left: 0;
+        transform: rotate(-45deg) ;
+
+    }
+    .navMenuContainerContaier{
+        background: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: -100%;
+    }
+    .getStartedBtn{
+        
+        background: white;
+        color: #000;
+    }
+    .navEls{
+        flex-direction: column;
+        overflow: hidden;
+    }
+    .navGetStarted{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 2rem;
+        position: relative;
+    }
+    .navGetStarted::before{
+        content: '';
+        position: absolute;
+        width: 120%;
+        height: 3px;
+        top: -1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #fff;
+    }
+    nav div a, .navEl{
+        color: white;
+        padding: 10px 20px !important;
+        margin: 5px 0;
+        box-sizing: border-box;
+        line-height: 10px;
+        font-size: 15px;
+    }
+    .hamburgerMenu{
+        display: block;
+    }
+    .herotablet{
+        display: none;
+    }
+    .heromobile{
+        display: block;
+        width: 100% !important;
+        
+    }
+    .businessText h1, .secH1{
+        font-size: 35px;
+    }
+    .sec2Text{
+        padding: 50px 30px;
+    }
+    .tabletLogos{
+        display: none;
+    }
+    .desktopLogos img{
+        height: 30px;
+    }
+}
